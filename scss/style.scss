@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    font-family: sans-serif;
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(to bottom right, #00008B, #000000);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#login-screen {
+    display: flex;
+    justify-content: center;
+
+
+}
+#login-btn {
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.input-container {
+    /*position: absolute;*/
+    background: linear-gradient(to bottom right, #00008B, #000000);
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border: none;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#message-input {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 100%;
+    padding: 5px 15px;
+
+}
+
+.message-container:last-of-type {
+    animation: new-message 300ms 50ms forwards;
+}
+
+@keyframes new-message {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    95% {
+        transform: translateY(-5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#chat-screen {
+    /*display:none;*/
+    min-height: calc(100vh - 26.67px);
+}
+
+.message-container {
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.user-photo {
+    width: 60px;
+    border-radius: 50px;
+}
+
+
+
+.text {
+    margin-left: 30px;
+    font-family: cursive;
+}
+
+.user-name, .message {
+    color: white;
+}
+ h1 {
+     font-size: 50px;
+     text-align: center;
+     font-family: cursive;
+     color:#F5F5DC;
+
+ }
