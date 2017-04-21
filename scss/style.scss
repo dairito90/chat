@@ -2,27 +2,102 @@
     box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
     margin: 0;
     font-family: sans-serif;
     height: 100%;
+    background-color: #000000;
 }
-
-body {
-    background: linear-gradient(to bottom right, #00008B, #000000);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
+// body {
+//     // background: linear-gradient(to bottom right, #00008B, #000000);
+//     background-repeat: no-repeat;
+//     background-attachment: fixed;
+// }
 
 #login-screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    height: 80px;
+}
+
+h1 {
+    font-size: 5rem;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.main-head {
     display: flex;
     justify-content: center;
-
-
+    // background-color: #008FE5;
+    flex: 4;
+    background: linear-gradient to right(45deg, #01A0FE);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#008fe5+0,2989d8+50,207cca+51,01a0fe+100 */
+    background: #008fe5;
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #008fe5 0%, #2989d8 50%, #207cca 51%, #01a0fe 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #008fe5 0%,#2989d8 50%,#207cca 51%,#01a0fe 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #008fe5 0%,#2989d8 50%,#207cca 51%,#01a0fe 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#008fe5', endColorstr='#01a0fe',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
 }
-#login-btn {
-    font-size: 20px;
-    font-family: monospace;
+
+.bottom {
+    display: flex;
+    flex: 4;
+    background-color: #000000;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+#button-container {
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    align-self: stretch;
+    margin-top: 80px;
+    padding: 10px;
+}
+
+#under-container {
+    display: flex;
+    background-color: #01A0FE;
+    align-self: stretch;
+    padding: 20px;
+}
+
+#get-started {
+    color: #DEF6FF;
+    font-family: sans-serif;
+}
+
+.bottom-header {
+    display: flex;
+    background: #000000;
+    flex: 1;
+    justify-content: center;
+}
+
+p {
+    color: #5A5A5A;
+}
+
+#chat {
+    margin: 20px;
+}
+
+.create-account {
+    color: #C9C9C9;
+    text-decoration: underline;
 }
 
 .input-container {
@@ -43,21 +118,21 @@ body {
     border-radius: 20px;
     width: 100%;
     padding: 5px 15px;
-
 }
 
 .message-container:last-of-type {
     animation: new-message 300ms 50ms forwards;
 }
-
 @keyframes new-message {
     0% {
         opacity: 0;
         transform: translateY(100%);
     }
+
     95% {
         transform: translateY(-5px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -65,8 +140,8 @@ body {
 }
 
 #chat-screen {
-    /*display:none;*/
-    min-height: calc(100vh - 26.67px);
+    display: none;
+    height: 100vh;
 }
 
 .message-container {
@@ -80,20 +155,18 @@ body {
     border-radius: 50px;
 }
 
-
-
 .text {
     margin-left: 30px;
     font-family: cursive;
 }
 
-.user-name, .message {
+.message,
+.user-name {
     color: white;
 }
- h1 {
-     font-size: 50px;
-     text-align: center;
-     font-family: cursive;
-     color:#F5F5DC;
 
- }
+#login-btn,
+#login-github,
+#login-twitter {
+    margin: 10px;
+}
