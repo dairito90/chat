@@ -17,7 +17,7 @@ html {
 
 #login-screen {
     height: 100vh;
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -46,7 +46,7 @@ h1 {
     /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(45deg, #008fe5 0%,#2989d8 50%,#207cca 51%,#01a0fe 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#008fe5', endColorstr='#01a0fe',GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#008fe5', endColorstr='#01a0fe',GradientType=1 );
     /* IE6-9 fallback on horizontal gradient */
 }
 
@@ -73,6 +73,13 @@ h1 {
     background-color: #01A0FE;
     align-self: stretch;
     padding: 20px;
+    justify-content: flex-end;
+}
+
+#play_btn {
+    margin-right: 200px;
+    margin-top: 15px;
+    height: 15px;
 }
 
 #get-started {
@@ -101,24 +108,87 @@ p {
 }
 
 .input-container {
+    display: flex;
     /*position: absolute;*/
-    background: linear-gradient(to bottom right, #00008B, #000000);
-    padding: 10px;
+    background-color: #000000;
+    padding: 20px;
     position: fixed;
     bottom: 0;
     width: 100%;
     border: none;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
 }
 
-#message-input {
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 20px;
+#top-header {
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    background-color: #000000;
+    top:0;
+    position: absolute;
     width: 100%;
-    padding: 5px 15px;
+    padding: 20px;
+
 }
+
+#play {
+    height: 15px;
+}
+
+#dots {
+    height: 40px;
+}
+
+#title-header {
+margin-left: 30px;
+    color:#A2A2A2;
+font-size: 1rem;
+}
+
+
+
+#camera {
+    height: 30px;
+    // margin-left: 15px;
+
+}
+
+// #send-button {
+//     height: 80px;
+//     border-radius: 50px;
+//     margin-top: ;
+//
+//     background-color: #FEBDB7;
+// }
+
+#message-input {
+    background: transparent;
+    border: none;
+    // box-sizing: border-box;
+    // border: 1px solid #ccc;
+    // border-radius: 20px;
+    width: 100%;
+    padding: 5px 70px;
+
+
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #A2A2A2;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #A2A2A2;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #A2A2A2;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #A2A2A2;
+}
+
+
+
 
 .message-container:last-of-type {
     animation: new-message 300ms 50ms forwards;
@@ -140,8 +210,20 @@ p {
 }
 
 #chat-screen {
-    display: none;
+    display: flex;
     height: 100vh;
+    background: linear-gradient to right(45deg, #01A0FE);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#008fe5+0,2989d8+50,207cca+51,01a0fe+100 */
+    background: #008fe5;
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #008fe5 0%, #2989d8 50%, #207cca 51%, #01a0fe 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #008fe5 0%,#2989d8 50%,#207cca 51%,#01a0fe 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #008fe5 0%,#2989d8 50%,#207cca 51%,#01a0fe 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#008fe5', endColorstr='#01a0fe',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
 }
 
 .message-container {
