@@ -8,6 +8,7 @@ html {
     font-family: sans-serif;
     height: 100%;
     background-color: #000000;
+
 }
 // body {
 //     // background: linear-gradient(to bottom right, #00008B, #000000);
@@ -17,7 +18,7 @@ html {
 
 #login-screen {
     height: 100vh;
-    display: none;
+    display: flex;
     flex-direction: column;
 }
 
@@ -116,21 +117,19 @@ p {
     bottom: 0;
     width: 100%;
     border: none;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
 }
 
 #top-header {
     display: flex;
-    align-items:center;
-    justify-content:space-between;
+    align-items: center;
+    justify-content: space-between;
     background-color: #000000;
-    top:0;
-    position: absolute;
+    top: 0;
+    position: fixed;
     width: 100%;
     padding: 20px;
-
 }
 
 #play {
@@ -142,19 +141,16 @@ p {
 }
 
 #title-header {
-margin-left: 30px;
-    color:#A2A2A2;
-font-size: 1rem;
+    margin-left: 30px;
+    color: #A2A2A2;
+    font-size: 1rem;
 }
-
-
 
 #camera {
     height: 30px;
     // margin-left: 15px;
-
+    margin-right: 10px;
 }
-
 // #send-button {
 //     height: 80px;
 //     border-radius: 50px;
@@ -171,24 +167,27 @@ font-size: 1rem;
     // border-radius: 20px;
     width: 100%;
     padding: 5px 70px;
-
-
-}
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #A2A2A2;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: #A2A2A2;
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color: #A2A2A2;
-}
-:-moz-placeholder { /* Firefox 18- */
-  color: #A2A2A2;
 }
 
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #A2A2A2;
+}
 
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #A2A2A2;
+}
 
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #A2A2A2;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #A2A2A2;
+}
 
 .message-container:last-of-type {
     animation: new-message 300ms 50ms forwards;
@@ -210,26 +209,42 @@ font-size: 1rem;
 }
 
 #chat-screen {
-    display: flex;
-    height: 100vh;
-    background: linear-gradient to right(45deg, #01A0FE);
+    display: none;
+    min-height: 100vh;
+    // background: linear-gradient to right(45deg, #01A0FE);
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#008fe5+0,2989d8+50,207cca+51,01a0fe+100 */
-    background: #008fe5;
+    background:  #008fe5;
     /* Old browsers */
-    background: -moz-linear-gradient(45deg, #008fe5 0%, #2989d8 50%, #207cca 51%, #01a0fe 100%);
+    background:  -moz-linear-gradient(45deg, #008fe5 0%, #2989d8 50%, #207cca 51%, #01a0fe 100%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(45deg, #008fe5 0%,#2989d8 50%,#207cca 51%,#01a0fe 100%);
+    background:  -webkit-linear-gradient(45deg, #008fe5 0%,#2989d8 50%,#207cca 51%,#01a0fe 100%);
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(45deg, #008fe5 0%,#2989d8 50%,#207cca 51%,#01a0fe 100%);
+    background:  linear-gradient(45deg, #008fe5 0%,#2989d8 50%,#207cca 51%,#01a0fe 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#008fe5', endColorstr='#01a0fe',GradientType=1 );
     /* IE6-9 fallback on horizontal gradient */
+
 }
+
+
+    #chat-background {
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
 
 .message-container {
     padding: 30px;
     display: flex;
     align-items: flex-start;
+
 }
 
 .user-photo {
@@ -245,6 +260,8 @@ font-size: 1rem;
 .message,
 .user-name {
     color: white;
+    margin: 40px;
+
 }
 
 #login-btn,

@@ -10,7 +10,7 @@ html {
 
 #login-screen {
   height: 100vh;
-  display: none;
+  display: flex;
   flex-direction: column; }
 
 img {
@@ -94,9 +94,7 @@ p {
   position: fixed;
   bottom: 0;
   width: 100%;
-  border: none;
-  background-repeat: no-repeat;
-  background-attachment: fixed; }
+  border: none; }
 
 #top-header {
   display: flex;
@@ -104,7 +102,7 @@ p {
   justify-content: space-between;
   background-color: #000000;
   top: 0;
-  position: absolute;
+  position: fixed;
   width: 100%;
   padding: 20px; }
 
@@ -120,7 +118,8 @@ p {
   font-size: 1rem; }
 
 #camera {
-  height: 30px; }
+  height: 30px;
+  margin-right: 10px; }
 
 #message-input {
   background: transparent;
@@ -158,9 +157,8 @@ p {
     transform: translateY(0); } }
 
 #chat-screen {
-  display: flex;
-  height: 100vh;
-  background: linear-gradient to right(45deg, #01A0FE);
+  display: none;
+  min-height: 100vh;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#008fe5+0,2989d8+50,207cca+51,01a0fe+100 */
   background: #008fe5;
   /* Old browsers */
@@ -172,6 +170,15 @@ p {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#008fe5', endColorstr='#01a0fe',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */ }
+
+#chat-background {
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0; }
 
 .message-container {
   padding: 30px;
@@ -188,7 +195,8 @@ p {
 
 .message,
 .user-name {
-  color: white; }
+  color: white;
+  margin: 40px; }
 
 #login-btn,
 #login-github,
