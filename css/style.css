@@ -11,7 +11,8 @@ html {
 #login-screen {
   height: 100vh;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  background-color: black; }
 
 img {
   height: 80px; }
@@ -95,6 +96,12 @@ p {
   bottom: 0;
   width: 100%;
   border: none; }
+
+textarea:focus, input:focus {
+  color: #fff; }
+
+input, select, textarea {
+  color: #fff; }
 
 #top-header {
   display: flex;
@@ -192,15 +199,21 @@ p {
 
 .user-photo {
   width: 60px;
-  border-radius: 50px; }
+  border-radius: 60px; }
 
 .text {
   margin-left: 30px;
-  font-family: cursive; }
+  font-family: cursive;
+  display: block;
+  position: relative;
+  width: 250px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 10px; }
 
 .message,
 .user-name {
-  color: white;
+  color: #000000;
   margin: 40px; }
 
 #login-btn,
