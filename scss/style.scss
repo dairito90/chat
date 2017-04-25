@@ -110,6 +110,7 @@ p {
 
 .input-container {
     display: flex;
+
     /*position: absolute;*/
     background-color: #000000;
     padding: 20px;
@@ -139,6 +140,8 @@ input, select, textarea{
     position: fixed;
     width: 100%;
     padding: 20px;
+    z-index: 10;
+
 
 }
 
@@ -259,14 +262,14 @@ input, select, textarea{
 }
 
 .user-photo {
-    width: 60px;
+    width: 80px;
     border-radius: 60px;
 }
 
 .text {
 
-    margin-left: 30px;
-    font-family: cursive;
+    margin-left:  20px;
+    font-family: verdana;
     display: block;
     position: relative;
     width: 250px;
